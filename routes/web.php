@@ -19,6 +19,11 @@ Route::get('/age/{age?}', function ($age) {
     return "You're ${age} years old.";
 })->middleware('checkedAge');
 
+// Creating a route for the hello first_name blade page
+Route::get('/hello/{first_name}', function ($first_name) {
+    return view('hello', ['name'=>$first_name]);
+});
+
 Route::post('/korisnici', function () {
     return 'Post request';
 });
