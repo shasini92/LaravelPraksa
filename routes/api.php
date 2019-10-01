@@ -13,6 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/praksa', function () {
+    return 'Pozdrav';
+});
+
+Route::post('/korisnici', function () {
+    return 'Post request';
+});
+
+Route::put('/korisnici1',function () {
+    return 'Pozdrav';
+});
+
+Route::patch('/korisnici2', function () {
+    return 'Pozdrav';
+});
+
+Route::delete('/users/{id}',  function ($id) {
+    return "Srbija";
 });
