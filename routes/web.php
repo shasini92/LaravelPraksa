@@ -10,32 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 // Applying middleware "checkedAge" to the age/{age} route
-Route::get('/age/{age?}', function ($age) {
-    return "You're ${age} years old.";
-})->middleware('checkedAge');
+Route::get('/age/{age?}', 'HomeController@age')->middleware('checkedAge');
 
 // Creating a route for the hello first_name blade page
-Route::get('/hello/{first_name}', function ($first_name) {
-    return view('hello', ['name'=>$first_name]);
-});
+Route::get('/hello/{first_name}', 'HomeController@hello');
 
-Route::post('/korisnici', function () {
-    return 'Post request';
-});
+Route::post('/korisnici', 'HomeController@create');
 
-Route::put('/korisnici1',function () {
-    return 'Pozdrav';
-});
+Route::put('/korisnici1','HomeController@update');
 
-Route::patch('/korisnici2', function () {
-    return 'Pozdrav';
-});
+Route::patch('/korisnici2', 'HomeController@edit');
 
-Route::delete('/users/{id}',  function ($id) {
-    return "Srbija";
-});
+Route::delete('/users/{id}', 'HomeController@destroy');
