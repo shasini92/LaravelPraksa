@@ -16,7 +16,7 @@ class LogRequests
     public function handle($request, Closure $next)
     {
         // Dumping the request url
-        var_dump($request->fullUrl());
+        // var_dump($request->fullUrl());
         
         return $next($request);
     }

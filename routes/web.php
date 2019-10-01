@@ -25,3 +25,6 @@ Route::put('/korisnici1','HomeController@update');
 Route::patch('/korisnici2', 'HomeController@edit');
 
 Route::delete('/users/{id}', 'HomeController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
