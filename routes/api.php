@@ -13,22 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/praksa', function () {
-    return 'Pozdrav';
-});
 
-Route::post('/korisnici', function () {
-    return 'Post request';
-});
-
-Route::put('/korisnici1',function () {
-    return 'Pozdrav';
-});
-
-Route::patch('/korisnici2', function () {
-    return 'Pozdrav';
-});
-
-Route::delete('/users/{id}',  function ($id) {
-    return "Srbija";
-});
